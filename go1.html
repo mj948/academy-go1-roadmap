@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1-2 탐구주제 방향 가이드 · 대치 아카데미</title>
+<style>
+:root{
+  --paper:#EFF3F8;--card:#FFF;--ink:#172B4D;--ink2:#425571;--ink3:#62748C;
+  --line:#D8E1ED;--line2:#E8EDF5;
+  --up:#315BD6;--up-s:#EDF2FF;--up-i:#2449AE;
+  --nm:#9A5F10;--nm-s:#F8EFDE;
+  --al:#A33A2B;--al-s:#F9E8E4;
+  --bl:#2A5A8C;--bl-s:#E5EDF5;--bl-i:#1E4166;
+  --sh:0 1px 2px rgba(21,26,32,.05),0 10px 28px -20px rgba(21,26,32,.4);
+  --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --serif:ui-serif,Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#101827;--card:#172237;--ink:#EAF0FA;--ink2:#BDCBE0;--ink3:#9BAEC8;
+  --line:#35445E;--line2:#293750;--up:#91ADFF;--up-s:#23355B;--up-i:#B4C8FF;
+  --nm:#D9A75B;--nm-s:#32280F;--al:#E08B7A;--al-s:#37211C;
+  --bl:#7FAEDC;--bl-s:#17293C;--bl-i:#9CC4E8;
+  --sh:0 1px 2px rgba(0,0,0,.4),0 10px 28px -20px rgba(0,0,0,.9);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 18px 90px}
+h1,h2,h3{margin:0;text-wrap:balance}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--up);outline-offset:2px;border-radius:4px}
+.tablewrap{overflow-x:auto}
+
+header.top{border-bottom:1.5px solid var(--ink);padding-bottom:15px;margin-bottom:18px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+h1{font-size:clamp(23px,4.2vw,33px);letter-spacing:-.02em;font-weight:800;line-height:1.22;margin-top:5px}
+.sub{color:var(--ink2);font-size:15px;margin-top:7px;max-width:60ch}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:19px;box-shadow:var(--sh);margin-bottom:14px}
+.card h2{font-size:16.5px;font-weight:750;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.card h2 .n{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ink3)}
+.card h2 .sm{font-weight:500;color:var(--ink3);font-size:13px}
+.lede{color:var(--ink2);font-size:14px;margin:5px 0 13px;max-width:64ch}
+textarea,input[type=text],input[type=password],select{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:15px;line-height:1.6;resize:vertical}
+textarea{min-height:110px}
+select{appearance:none;padding-right:36px;background-image:linear-gradient(45deg,transparent 50%,var(--ink3) 50%),linear-gradient(135deg,var(--ink3) 50%,transparent 50%);background-position:calc(100% - 17px) 52%,calc(100% - 12px) 52%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+label.fl{display:block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink3);margin-bottom:6px}
+.field{margin-bottom:14px}
+.steps2{display:grid;gap:10px;margin-top:4px}
+.s2{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:baseline;font-size:14.5px;color:var(--ink2);line-height:1.6}
+.s2 b:first-child{font-family:var(--mono);font-size:13px;color:var(--up);font-weight:700}
+.s2 b{color:var(--ink)}
+.s2>.row{grid-column:2;margin-top:8px}
+.rule{grid-column:2;margin-top:7px;background:var(--nm-s);color:var(--nm);border-radius:8px;padding:9px 12px;font-size:13.5px;font-weight:600;line-height:1.55}
+.rule code{font-family:var(--mono);font-size:12.5px;background:rgba(0,0,0,.06);padding:1px 5px;border-radius:4px}
+.cardtbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;min-width:640px}
+.cardtbl th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);padding:0 9px 6px 0;border-bottom:1.5px solid var(--line);white-space:nowrap}
+.cardtbl td{padding:8px 9px 8px 0;border-bottom:1px solid var(--line2);vertical-align:top;line-height:1.5}
+.cardtbl td:first-child{white-space:nowrap;font-weight:700}
+.cardtbl .num{font-family:var(--mono);font-size:11.5px;color:var(--up-i)}
+.cardtbl tr.off{opacity:.35;text-decoration:line-through}
+.cardtbl tr.nosubj td:first-child{color:var(--al)}
+.cardtbl input.sj{width:96px;padding:4px 7px;font-size:12.5px;border-radius:6px;border:1.5px solid var(--al);background:var(--al-s)}
+.cardtbl button{background:none;border:0;cursor:pointer;color:var(--ink3);font-size:15px;padding:0 4px}
+.okline{margin-top:10px;font-size:13.5px;color:var(--up-i);background:var(--up-s);border-radius:8px;padding:9px 12px}
+.warnline{margin-top:8px;font-size:13.5px;color:var(--al);background:var(--al-s);border-radius:8px;padding:9px 12px;font-weight:600}
+.subject-check{margin-top:20px;padding:15px;border:2px solid var(--nm);border-radius:9px;background:var(--nm-s)}
+.subject-check .check-title{display:block;margin-bottom:6px;color:var(--ink);font-size:16px;font-weight:800}
+.subject-check p{margin:0 0 12px;color:var(--ink2);font-size:14px;line-height:1.65}
+.subject-check label{display:block;margin-bottom:7px;color:var(--ink);font-size:14px;font-weight:700}
+.subject-check input{background:var(--card)}
+.subject-check .hint{margin:8px 0 0;font-size:13px}
+
+.btn{background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:8px;padding:12px 22px;font-weight:700;font-size:15px;cursor:pointer}
+.btn:hover{opacity:.87}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.g{background:transparent;color:var(--ink2);border-color:var(--line)}
+.btn.u{background:var(--up);border-color:var(--up);color:#fff}
+.btn.sm{padding:7px 13px;font-size:13.5px}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.hint{font-size:13px;color:var(--ink3);margin:7px 0 0}
+.src{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink3);display:block;margin-top:5px}
+
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:820px){.opts{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.opts{grid-template-columns:1fr}}
+.opt{border:1.5px solid var(--line);border-radius:9px;padding:11px 13px;cursor:pointer;background:var(--card);text-align:left;display:flex;flex-direction:column;gap:3px}
+.opt:hover{border-color:var(--ink3)}
+.opt[aria-pressed="true"]{border-color:var(--up);background:var(--up-s)}
+.opt .t{font-weight:750;font-size:14.5px}
+.opt .d{font-size:12.5px;color:var(--ink2);line-height:1.45}
+.opt[aria-pressed="true"] .t,.opt[aria-pressed="true"] .d{color:var(--up-i)}
+.qlabel{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);margin:16px 0 7px;font-weight:700}
+.qlabel.question-title{font-family:var(--sans);font-size:19px;line-height:1.45;letter-spacing:-.02em;color:var(--ink);font-weight:800;margin:26px 0 9px;padding-left:11px;border-left:4px solid var(--up)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:transparent;padding:9px 17px;font-size:14.5px;cursor:pointer;font-weight:600;color:var(--ink2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.chip{border:1.5px solid var(--nm);background:var(--nm-s);color:var(--nm);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:700;display:inline-flex;gap:7px;align-items:center}
+.chip small{font-weight:500;opacity:.8;font-size:12px}
+
+.dirs{display:grid;gap:16px}
+.dir{border:1px solid var(--line);border-radius:11px;background:var(--card);padding:18px 20px;box-shadow:var(--sh)}
+.dir .hd{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.dir .kw{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.dir .kw em{font-style:normal;color:var(--nm)}
+.dir .x{color:var(--ink3);font-weight:400;margin:0 3px}
+.dir .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;padding:3px 8px;border-radius:5px;background:var(--up-s);color:var(--up-i);font-weight:700}
+.dir .line{font-size:15.5px;line-height:1.72;margin:0 0 4px}
+.seedbox{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:center;background:var(--nm-s);border-radius:9px;padding:11px 13px;margin:11px 0}
+.seedbox b{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--nm);white-space:nowrap;font-weight:700}
+.seedbox span{font-size:15.5px;font-weight:750;color:var(--nm)}
+.dir .gather{background:var(--bl-s);color:var(--bl-i);border-radius:8px;padding:9px 12px;font-size:13.5px;margin:10px 0;line-height:1.6}
+.grp{margin-top:16px;border-top:1px solid var(--line2);padding-top:13px}
+.grp>h4{margin:0 0 3px;font-size:13.5px;font-weight:750}
+.grp>p.why{margin:0 0 10px;font-size:12.5px;color:var(--ink3);line-height:1.5}
+.slot{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:10px 0;border-top:1px dashed var(--line2)}
+.slot:first-of-type{border-top:0;padding-top:2px}
+@media (max-width:560px){.slot{grid-template-columns:1fr;gap:3px}}
+.slot .sn{font-size:13px;font-weight:750;color:var(--up-i);background:var(--up-s);border-radius:6px;padding:3px 8px;text-align:center;height:fit-content;white-space:nowrap}
+.grp.subj .slot .sn{color:var(--bl-i);background:var(--bl-s)}
+@media (max-width:560px){.slot .sn{justify-self:start;padding:2px 9px}}
+.slot .sd{font-size:14.5px;line-height:1.62;margin:0}
+.slot .sf{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--ink3);margin:4px 0 0}
+.slot .sf b{color:var(--ink2);font-weight:700}
+.slot .qm{font-family:var(--serif);font-size:13px;color:var(--up);margin-right:3px}
+.slot .sdet{font-size:13.5px;color:var(--ink2);margin:4px 0 0;line-height:1.6;border-left:2px solid var(--line2);padding-left:9px}
+.pick{display:block;width:100%;text-align:left;border:1.5px solid var(--line);border-radius:10px;background:var(--card);padding:14px 16px;margin-top:10px;cursor:pointer}
+.pick:hover{border-color:var(--up)}
+.pick[aria-pressed="true"]{border-color:var(--up);background:var(--up-s)}
+.pick .pt{display:block;font-size:16px;font-weight:750;line-height:1.55}
+.pick .pb{display:block;font-size:13px;color:var(--ink3);margin-top:6px}
+.pick[aria-pressed="true"] .pt{color:var(--up-i)}
+.dl{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink3);font-weight:700}
+.ckws{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.ckw{font-size:12.5px;font-weight:600;background:var(--bl-s);color:var(--bl-i);padding:3px 9px;border-radius:5px}
+.wada{display:grid;grid-template-columns:auto 1fr;gap:10px;margin:9px 0;font-size:14px;line-height:1.6;align-items:baseline}
+.wada b{font-family:var(--serif);font-size:15px;white-space:nowrap;font-weight:700;color:var(--up);text-align:center}
+.wada.af b{color:var(--nm)}
+.wada span{color:var(--ink2)}
+details.sum{margin-top:10px;border:1px solid var(--line);border-radius:9px;background:var(--paper)}
+details.sum summary{cursor:pointer;padding:10px 13px;font-size:13.5px;font-weight:700;list-style:none}
+details.sum summary::-webkit-details-marker{display:none}
+details.sum summary em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--nm);background:var(--nm-s);padding:2px 6px;border-radius:4px;margin-left:7px}
+details.sum pre{margin:0;padding:0 13px 13px;white-space:pre-wrap;font-family:var(--sans);font-size:14px;line-height:1.75;color:var(--ink2)}
+.dir .foot2{margin-top:13px;padding-top:10px;border-top:1px solid var(--line2);font-size:13px;color:var(--ink3);display:flex;gap:14px;flex-wrap:wrap}
+.dir .foot2 b{color:var(--ink2);font-weight:700}
+.ladder{display:grid;grid-template-columns:auto 1fr;gap:6px 11px;margin-top:11px;padding-top:10px;border-top:1px solid var(--line2);font-size:13.5px;align-items:baseline}
+.ladder b{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;white-space:nowrap;font-weight:700}
+.ladder b.now{color:var(--up)}
+.ladder span.now{color:var(--ink);font-weight:600}
+.ladder b.nxt,.ladder span.nxt{color:var(--ink3)}
+
+.note{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:13px 15px;font-size:14px;color:var(--ink2);margin-top:14px}
+.note b{color:var(--ink)}
+.err{background:var(--al-s);color:var(--al);border-radius:9px;padding:13px 15px;font-size:14.5px;font-weight:600;margin-top:12px}
+.load{display:flex;align-items:center;gap:12px;background:var(--up-s);color:var(--up-i);border-radius:9px;padding:15px 17px;font-size:15px;margin-top:14px;font-weight:600}
+.spin{width:16px;height:16px;border:2.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite;flex:none}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:2.4s}}
+
+details.dr{border:1px solid var(--line);border-radius:11px;background:var(--card);margin-bottom:13px}
+details.dr summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.dr summary::-webkit-details-marker{display:none}
+details.dr summary::after{content:"펴기";font-family:var(--mono);font-size:11px;color:var(--ink3)}
+details.dr[open] summary::after{content:"접기"}
+details.dr .bd{padding:0 18px 16px}
+table.ex{width:100%;border-collapse:collapse;font-size:13px;min-width:600px}
+table.ex th{text-align:left;font-size:11px;font-family:var(--mono);letter-spacing:.05em;color:var(--ink3);text-transform:uppercase;padding:0 9px 7px 0;border-bottom:1.5px solid var(--line);vertical-align:bottom}
+table.ex td{padding:9px 9px 9px 0;border-bottom:1px solid var(--line2);vertical-align:top;line-height:1.5}
+table.ex td:first-child{font-weight:700;white-space:nowrap}
+table.ex th.hi{color:var(--up-i)}
+.y1{color:var(--up-i);font-weight:600}
+.gl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:14px;align-items:baseline}
+.gl b{white-space:nowrap}
+.gl span{color:var(--ink2)}
+.paths{display:grid;gap:9px}
+.path{border-left:3px solid var(--up);padding:9px 0 9px 13px;font-size:14.5px}
+.path b{display:block}
+.path span{color:var(--ink2);font-size:13.5px}
+.moves{display:grid;gap:7px;font-size:14px}
+.mv{display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:baseline}
+.mv i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink3);white-space:nowrap}
+.mv b{color:var(--up-i);white-space:nowrap}
+.mv span{color:var(--ink2);font-size:13.5px}
+@media (max-width:560px){.mv{grid-template-columns:auto 1fr}.mv span{grid-column:1/-1}}
+.foot{margin-top:28px;padding-top:15px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink3)}
+@media print{.card:first-of-type,details.dr,.btn,.row{display:none}}
+.srcbox{border:1px solid var(--line);border-radius:9px;padding:14px;margin-bottom:12px}
+.srcbox .sl{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-weight:750;font-size:14.5px;margin-bottom:6px}
+.srcbox .sl .bk{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink3);font-weight:700}
+.srcbox .sl small{font-weight:500;font-size:12.5px;color:var(--ink3)}
+.srcbox .sl small.req{color:var(--up);font-weight:700}
+.srcbox input[type=file]{display:block;width:100%;font-size:13.5px;color:var(--ink2);margin-top:4px}
+.srcbox textarea{margin-top:10px}
+.flist{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}
+.flist:empty{display:none}
+.flist li{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:13px;background:var(--paper);border:1px solid var(--line2);border-radius:7px;padding:6px 10px}
+.flist .fn{font-weight:700;overflow-wrap:anywhere}
+.flist .fs{font-family:var(--mono);font-size:11px;color:var(--ink3)}
+.flist .fh{color:var(--up-i);font-size:12.5px}
+.flist .fh.rd{color:var(--ink3)}
+.flist .fh.bad{color:var(--al);font-weight:600}
+.flist button{margin-left:auto;background:none;border:0;cursor:pointer;color:var(--ink3);font-size:15px;padding:0 4px}
+
+@media print{.srcbox,.flist,#cmsg{display:none}}
+
+/* September edition */
+.wrap{max-width:1080px;padding:32px 24px 88px}
+header.top{border:0;border-radius:24px;background:#172D51;color:#fff;padding:28px 36px 0;margin-bottom:24px;overflow:hidden}
+.brand-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.eyebrow{font-family:var(--sans);font-size:13px;font-weight:650;letter-spacing:.03em;color:#C7D6EF}
+.edition{border:1px solid #58729B;border-radius:6px;padding:4px 10px;color:#DFE9FF;font-size:12px;font-weight:650;white-space:nowrap}
+.hero-copy{padding:32px 0 30px}
+.hero-kicker{font-size:14px;color:#BBCFF5;margin:0 0 10px}
+h1{font-size:clamp(30px,5vw,44px);letter-spacing:-.045em;line-height:1.2;margin:0}
+.sub{font-size:16px;color:#D2DEF0;line-height:1.75;margin:16px 0 0}
+.journey{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0;margin:0;border-top:1px solid #3D5273;gap:20px}
+.journey li{display:flex;gap:12px;align-items:baseline}
+.journey li>span{font:600 12px var(--mono);color:#98B9FF}
+.journey b{font-size:14px;font-weight:700;display:block}
+.journey small{display:block;font-size:12px;color:#BDCCE3;margin-top:3px}
+.card{border-radius:20px;padding:30px;box-shadow:0 6px 24px -16px #172D5140;margin-bottom:20px}
+.card h2{font-size:21px;letter-spacing:-.035em;gap:12px;align-items:center;margin-bottom:20px}
+.card h2 .n,.section-mark{display:inline-flex;align-items:center;justify-content:center;background:var(--up-s);color:var(--up-i);font:700 12px var(--mono);border-radius:8px;min-width:34px;height:34px;flex-shrink:0}
+.card h2 .sm{font-size:13px;letter-spacing:0}
+label.fl{font-family:var(--sans);font-size:12px;letter-spacing:0;color:var(--ink2)}
+textarea,input[type=text],input[type=password],select{background:var(--card);border-radius:10px;padding:12px 14px}
+textarea:focus,input:focus{border-color:var(--up)}
+.srcbox{background:var(--paper);border:1px dashed #9CACCA;border-radius:14px;padding:22px}
+.srcbox .sl{font-size:16px;margin-bottom:14px}
+.srcbox input[type=file]::file-selector-button{border:1px solid var(--line);border-radius:7px;padding:9px 14px;background:var(--card);color:var(--ink);font:600 13px var(--sans);margin-right:12px;cursor:pointer}
+.btn{border-radius:10px;padding:12px 22px;transition:background .15s,border-color .15s}
+.btn.u{background:#315BD6;border-color:#315BD6;color:#fff}
+.privacy-hint{font-size:12px;margin-top:16px}
+.form-section{border-top:1px solid var(--line);margin-top:30px;padding-top:28px}
+.section-heading{display:flex;gap:12px;align-items:flex-start;margin-bottom:20px}
+.section-heading h3{font-size:20px;letter-spacing:-.03em;line-height:1.6}
+.section-heading p{font-size:13px;color:var(--ink3);margin:3px 0 0}
+.qlabel{font-family:var(--sans);font-size:14px;letter-spacing:0;color:var(--ink2);margin-top:22px}
+.opt{position:relative;border-width:1px;padding:15px;border-radius:12px;gap:7px;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--up)}
+.opt[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--up)}
+.opt .t{font-size:14px;line-height:1.5}
+.opt .d{font-size:12.5px;line-height:1.65}
+.subject-check{border:1px solid var(--nm);border-left:4px solid var(--nm);border-radius:12px;padding:20px;margin-top:24px}
+.qlabel.question-title{font-size:21px;letter-spacing:-.035em;padding:0;border:0;margin:28px 0 10px}
+.questions>.question-title:first-child{margin-top:0}
+.questions .opts{margin-top:14px}
+.primary-action{margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.primary-action .btn.u{min-width:210px}
+.dir{border-radius:16px;padding:24px;box-shadow:none;border-top:3px solid var(--up)}
+.dir .kw{font-size:21px}
+details.dr{border-radius:13px;margin-bottom:10px;overflow:hidden}
+details.dr summary{padding:20px 22px;font-size:15px;line-height:1.5}
+details.dr summary::after{font-family:var(--sans);font-size:12px;white-space:nowrap;color:var(--up-i)}
+details.dr[open] summary{background:var(--up-s);margin-bottom:16px}
+details.dr .bd{padding:0 22px 22px}
+details.sum summary{line-height:1.8}
+@media(max-width:680px){
+  .wrap{padding:16px 14px 60px}
+  header.top{border-radius:18px;padding:22px 22px 0;margin-bottom:16px}
+  .hero-copy{padding:26px 0}
+  .eyebrow{font-size:11px}.edition{font-size:11px;padding:3px 7px}
+  .journey{gap:10px;padding:18px 0}.journey li{display:block}.journey b{font-size:12px;margin-top:5px}.journey small{display:none}
+  .card{padding:22px 18px;border-radius:16px}
+  .card h2{font-size:19px}.card h2 .sm{width:100%;padding-left:46px;font-size:12px;margin-top:-8px}
+  .srcbox{padding:16px}.srcbox .sl{font-size:15px}
+  .section-heading h3{font-size:18px}.subject-check{padding:16px}
+  .qlabel.question-title{font-size:20px}
+  .opt{padding:14px}.primary-action .btn.u{width:100%}
+  .dir{padding:18px 15px}.seedbox{grid-template-columns:1fr;gap:4px}
+  details.dr summary{padding:18px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.btn,.opt{transition:none}}
+@media print{header.top{background:white;color:black;padding:0}.eyebrow,.sub,.hero-kicker{color:#333}.journey,.edition{display:none}.card,.dir{box-shadow:none}.wrap{padding:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand-row"><div class="eyebrow">대치 아카데미 · 고1 2학기</div><span class="edition">9월 업데이트</span></div>
+  <div class="hero-copy"><p class="hero-kicker">1학기 활동에서 이어가는 2학기 탐구</p>
+  <h1>1-2 탐구로드맵</h1>
+  <p class="sub">보고서나 메모를 바로 올리고,<br>아이의 관심에 맞는 다음 탐구를 계획해 보세요.</p></div>
+  <ol class="journey" aria-label="탐구로드맵 이용 순서">
+    <li><span>01</span><div><b>기록 정리</b><small>자료를 올려 활동 카드 확인</small></div></li>
+    <li><span>02</span><div><b>진로 방향 선택</b><small>관심 분야에 맞는 꿈문장 선택</small></div></li>
+    <li><span>03</span><div><b>2학기 탐구 계획</b><small>학교 과목에 맞춰 주제 확인</small></div></li>
+  </ol>
+</header>
+
+<div class="card">
+  <h2><span class="n">01</span> 1학기 기록 올리기<span class="sm">파일을 올리거나 글을 적어 주세요</span></h2>
+  <label class="fl" for="pw">이번 달 비밀번호</label>
+  <input type="password" id="pw" placeholder="카페 공지에 있는 네 자리" style="max-width:220px" autocomplete="off">
+  <div class="srcbox" style="margin-top:16px">
+    <label class="sl" for="f1">1학기 수행평가 보고서·발표 내용·메모</label>
+    <input type="file" id="f1" multiple accept=".pdf,.hwp,.hwpx,.doc,.docx,.txt,.png,.jpg,.jpeg,.webp">
+    <p class="hint">PDF·한글(hwp/hwpx)·워드(doc/docx)·txt·사진을 여러 개 올려도 됩니다. <b>파일 이름이나 본문에 과목명을 적어 주세요.</b> 예) 통합과학_생물다양성보고서.hwp</p>
+    <p class="hint">문서 안의 그림·그래프가 중요하면 사진으로 따로 올려 주세요. 발표 파일은 PDF로 저장해 올리면 됩니다.</p>
+    <ul class="flist" id="fl1"></ul>
+    <label class="fl" for="t1" style="margin-top:12px">파일이 없으면 기억나는 활동을 적어 주세요</label>
+    <textarea id="t1" placeholder="과목 이름과 실제로 한 일을 적어 주세요.&#10;예) 통합과학 · 생물다양성 보고서 · 학교 화단에서 본 식물을 사진으로 찍고 잎 모양을 비교해 분류함. 이름을 확인하지 못한 식물은 따로 표시함."></textarea>
+  </div>
+  <div class="row"><button class="btn u" id="makeCards">활동 카드 만들기</button>
+    <span class="hint" style="margin:0" id="cardMsg" aria-live="polite">만든 카드는 다음 단계로 넘어가기 전에 확인할 수 있습니다.</span></div>
+  <div id="cmsg" role="status" aria-live="polite"></div>
+  <div id="cardView"></div>
+  <p class="hint privacy-hint">이름·학교·학번은 올리기 전에 지워 주세요.</p>
+
+  <section class="form-section" aria-labelledby="profileTitle">
+  <div class="section-heading"><span class="section-mark" aria-hidden="true">02</span><div><h3 id="profileTitle">관심 분야와 2학기 과목</h3><p>현재 생각하고 있는 진로와 학교 수업을 알려 주세요.</p></div></div>
+  <div class="qlabel">계열</div>
+  <div class="opts" id="track"></div>
+  <div id="secondBox" style="display:none">
+    <div class="qlabel">아직 고민 중인 두 계열</div>
+    <div class="opts" id="second"></div>
+  </div>
+
+  <div class="qlabel">희망 학과</div>
+  <div class="seg" role="group">
+    <button id="dec" aria-pressed="false">정했습니다</button>
+    <button id="undec" aria-pressed="true">아직 고민 중입니다</button>
+  </div>
+  <div id="deptBox" style="display:none;margin-top:10px">
+    <input type="text" id="dept" placeholder="예) 초등교육과, 산업공학과, 자유전공학부, 임상병리학과" autocomplete="off">
+  </div>
+  <p class="hint" id="deptHint"></p>
+
+  <div class="subject-check">
+    <strong class="check-title">꼭 확인해 주세요 · 2학기 과목은 학교마다 다릅니다</strong>
+    <p id="subj2Notice">아래 과목은 <b>미리 넣어 둔 예시</b>입니다. 학교 시간표나 수강 과목표를 보고 <b>이번 학기에 실제로 듣는 과목으로 수정해 주세요.</b></p>
+    <label for="subj2">실제로 듣는 2학기 과목 · 쉼표로 구분해 주세요</label>
+    <input type="text" id="subj2" value="공통국어2, 공통수학2, 공통영어2, 통합사회2, 통합과학2, 한국사2, 과학탐구실험2" autocomplete="off" aria-describedby="subj2Notice subj2Help">
+    <p class="hint" id="subj2Help"><b>안 듣는 과목은 지우고, 빠진 과목은 추가해 주세요.</b> 과목명 뒤의 1·2도 확인해 주세요. 정보·음악·미술·체육을 듣는다면 함께 적어 주세요. 여기에 적은 과목으로 탐구 방향을 만듭니다.</p>
+  </div>
+
+  </section>
+  <section class="form-section questions" aria-label="아이의 관심과 탐구 방식">
+  <div class="qlabel question-title" id="q1Label">아이는 평소 어떤 게 더 궁금한가요?</div>
+  <p class="hint" style="margin:0 0 8px">아이의 평소 모습에 가까운 것을 하나 골라 주세요.</p>
+  <div class="opts" id="q1" role="group" aria-labelledby="q1Label"></div>
+  <div class="qlabel question-title" id="q2Label">궁금한 게 생기면, 아이는 주로 어떻게 하나요?</div>
+  <div class="opts" id="q2" role="group" aria-labelledby="q2Label"></div>
+
+  </section>
+  <div class="row primary-action"><button class="btn u" id="goDream">① 꿈문장 만들기</button>
+    <button class="btn g sm" id="again" style="display:none">다시 뽑기</button></div>
+  <div id="msg"></div>
+</div>
+
+<div id="result"></div>
+
+<details class="dr" id="exDr" style="display:none">
+  <summary>희망 학과와 관련된 탐구 주제</summary>
+  <div class="bd"><div class="tablewrap"><table class="ex" id="exTable"></table></div>
+    <p class="hint"><b>첫 칸이 지금 학년입니다.</b> 2학년 칸은 그대로 따라 하시라는 게 아니라 어느 높이까지 가면 되는지 보시는 자료입니다.</p></div>
+</details>
+
+<details class="dr" id="glDr" style="display:none">
+  <summary>전공 관련 용어 안내</summary>
+  <div class="bd"><div class="gl" id="glBody"></div></div>
+</details>
+
+<details class="dr">
+  <summary>1학기 활동을 바탕으로 2학기 탐구 계획하기</summary>
+  <div class="bd">
+    <div class="moves">
+      <div class="mv"><i>조사·발표로 끝남</i><b>① 손으로 해 본다</b><span>노트북에서 찾아만 본 것을 직접 재거나 만들어서 확인합니다.</span></div>
+      <div class="mv"><i>실험으로 끝남</i><b>② 조건을 하나 바꾼다</b><span>온도·농도·시간·재료 중 하나만 바꿔 다시 하고 두 결과를 나란히 놓습니다.</span></div>
+      <div class="mv"><i>숫자가 나옴</i><b>③ 왜 그 숫자인지 묻는다</b><span>그 값이 왜 그렇게 나왔는지 이유를 하나 세우고 다시 재서 확인합니다.</span></div>
+      <div class="mv"><i>과목마다 따로 놈</i><b>④ 하나로 모은다</b><span>흩어진 것을 한 단어 아래로 모으고 2학기에 그 단어로 한 번 더 합니다.</span></div>
+    </div>
+    <div class="note" style="margin-top:14px"><b>1학년은 씨앗을 심는 학년입니다.</b> 1학년 기록에 "심도 있는 탐구가 부족하다"는 평이 붙는 것은 정상입니다. 깊이는 2·3학년 몫이에요. 1학년에 필요한 것은 활동 다섯 개가 아니라 <b>남길 단어 하나</b>입니다. 그래야 2학년에 이어붙일 자리가 생깁니다.
+      <span class="src">계열별 3년 로드맵 · 대치 아카데미 학과 시리즈 칼럼</span></div>
+  </div>
+</details>
+
+<details class="dr">
+  <summary>고1 세특 작성 시 확인할 사항</summary>
+  <div class="bd"><div class="paths">
+    <div class="path"><b>공통과목은 1과 2를 합산해 500자입니다</b><span>공통국어·공통수학·공통영어·통합사회·통합과학·한국사·과학탐구실험이 여기 해당합니다. 공통수학1과 공통수학2가 한 칸을 나눠 씁니다. 1학기에 이미 쓴 만큼 2학기 자리가 줄어듭니다.</span></div>
+    <div class="path"><b>그래서 한 과목에 주제는 하나입니다</b><span>500자를 둘로 나누면 250자씩입니다. 그 분량으로는 어떻게 했는지가 안 들어갑니다. 과목마다 다른 주제를 흩뿌리지 말고 한 과목에서 한 가지를 끝까지 갑니다.</span></div>
+    <div class="path"><b>학과 이름을 못 써도 됩니다</b><span>1학년은 공통과목뿐이라 진로 단어를 넣을 자리가 원래 좁습니다. 통합과학에서 항균 실험을 하면 그것으로 충분하고 치과 이야기가 없어도 됩니다. 진로 단어를 억지로 붙이면 감점입니다.</span></div>
+    <div class="path"><b>방학에 밖에서 한 것은 한 줄도 안 적힙니다</b><span>학교교육계획에 따라 학교에서 실시한 활동만 적는 것이 원칙입니다. 공인어학시험·교외 대회·해외 봉사는 어느 항목에도 못 씁니다.</span></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>2학기 진로활동에는 자리가 하나 더 있습니다.</b> 2학년 선택과목을 왜 그렇게 골랐는지입니다. 수강신청이 이 학기에 있어서 그렇습니다.
+    <span class="src">2026학년도 학교생활기록부 기재요령(고등학교) 18쪽 · 기재 불가 항목 · 공통과목 합산 500자</span></div>
+  </div>
+</details>
+
+<details class="dr">
+  <summary>수행평가 자기평가서 작성 방법</summary>
+  <div class="bd">
+    <p class="lede" style="margin:0 0 12px">선생님이 세특을 쓸 때 볼 수 있는 자료는 다섯 가지뿐입니다 — 동료평가서 · <b>자기평가서</b> · 수업산출물 · 소감문 · 독후감. 수행평가 한 번에 이 중 셋이 한꺼번에 나옵니다. 그래서 고1은 수행평가가 전부입니다.</p>
+    <div class="paths">
+      <div class="path"><b>1. 무엇을 하기로 했나</b><span>한 문장. 주제가 아니라 '내가 정한 것'</span></div>
+      <div class="path"><b>2. 왜 그걸 골랐나</b><span>수업의 어느 대목에서 걸렸는지. 진로를 억지로 붙이지 않습니다</span></div>
+      <div class="path"><b>3. 막힌 것과 바꾼 것</b><span>★ 잘된 것 말고 막힌 것. 이 줄이 세특을 가릅니다</span></div>
+      <div class="path"><b>4. 그래서 다음에 할 것</b><span>'더 알아보고 싶다'로 끝내지 않습니다</span></div>
+    </div>
+    <div class="note" style="margin-top:14px">3번을 안 쓰면 세특에 <b>"○○에 대해 조사하여 발표함"</b>이 남고, 3번을 쓰면 <b>"처음 방법으로는 색 변화 구분이 어려워 지시약을 바꾸어 세 차례 반복 측정함"</b>이 남습니다. 뒤의 문장은 아이가 말해 주지 않으면 안 나옵니다.<br><br>자기평가서를 안 걷는 학교면 아이가 먼저 여쭙게 합니다. "이번 수행평가, 이거 정리해서 같이 내도 될까요?"
+      <span class="src">2026학년도 학교생활기록부 기재요령(고등학교) 제4조 처리요령 · 세특 기재 활용 자료 5종</span></div>
+  </div>
+</details>
+
+<details class="dr">
+  <summary>희망 전공과 관련된 탐구 키워드 찾기</summary>
+  <div class="bd"><div class="paths">
+    <div class="path"><b>희망 학과 홈페이지 → 교수진 연구목록</b><span>학과 소개보다 여기가 실물입니다. 교수님들이 지금 무엇을 연구하는지가 그 학과의 키워드입니다. 학부 커리큘럼도 같이 봅니다.</span></div>
+    <div class="path"><b>서울대 아로리 → 전공 안내</b><span>학과 홈페이지 소개보다 심층적입니다. 「신입생들의 서재」에는 그 학과에 붙은 학생들이 읽은 책이 있습니다.</span></div>
+    <div class="path"><b>서울진로진학정보센터 → 학생부종합전형 가이드북</b><span>대학진학정보에서 대학별 PDF를 받습니다. 그 학과가 무엇을 보는지 대학이 직접 써 놓은 자료입니다.</span></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>순서는 이렇습니다.</b> 꿈문장 → 진로 키워드 → 교과목 연결.<br><br>
+    예) "소아 우울증의 조기 선별 지표를 표준화하는 소아정신과 의사가 되고 싶다"<br>
+    → 진로 키워드: 비자살적 자해 · 외상 후 스트레스 · 벡 우울증 척도<br>
+    → 공통국어2 연결: 외상 후 스트레스 증후군을 보이는 문학 작품 인물의 정서 분석</div>
+  </div>
+</details>
+
+<details class="dr">
+  <summary>탐구에 필요한 참고자료 찾기</summary>
+  <div class="bd"><div class="paths">
+    <div class="path"><b>단원이 끝나는 페이지</b><span>배운 개념을 실생활에 적용한 사례가 거기 모여 있습니다. 진도에 쫓기면 넘어가기 쉬운 자리입니다.</span></div>
+    <div class="path"><b>교과서 맨 뒤 출처</b><span>단원마다 인용한 자료 목록이 뒤쪽에 붙어 있습니다. 학교 자료라 출처가 확실하고 아이가 오늘 바로 펼 수 있습니다.</span></div>
+    <div class="path"><b>서울대 아로리</b><span>snuarori.snu.ac.kr — 신입생 인터뷰에 학과별로 1·2·3학년에 무엇을 했는지 본인 말로 적혀 있습니다.</span></div>
+    <div class="path"><b>에듀넷 티-클리어</b><span>과목별 성취기준을 볼 수 있습니다. 2학기에 배울 내용이 미리 나옵니다.</span></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>읽은 책을 세특으로 넘기는 방법은 셋입니다.</b> 발표 자료에 근거로 넣기 · 수행평가 보고서에 인용하기 · 그 책에서 생긴 질문으로 실험이나 조사하기. 읽고 감상문만 쓰면 독서활동상황 칸에 남고, 그 칸은 대학에 안 갑니다.</div>
+  </div>
+</details>
+
+<p class="foot">추천 주제는 대치 아카데미 학과별 탐구주제 자료 · 1학년 노하우는 계열별 3년 로드맵 칼럼 16편 · 칸별 역할은 학생부종합전형 공통 평가요소(건국·경희·연세·중앙·한국외대 2022) · 합산 500자와 기재 불가 항목은 2026학년도 학교생활기록부 기재요령(고등학교) · 2학기 단원은 2022 개정 교육과정 통합과학2·통합사회2·공통수학2 영역</p>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)};
+
+var Q1=[
+ {k:"원리",t:"왜 그런지 알고 싶어 해요",d:"어떤 원리로 작동하는지 궁금해해요"},
+ {k:"제작",t:"뭘 만들 수 있을지 생각해요",d:"배운 걸로 새로운 것을 만들고 싶어 해요"},
+ {k:"사람",t:"사람들의 생각이 궁금해요",d:"사람들이 왜 그렇게 선택하고 행동하는지 궁금해해요"},
+ {k:"측정",t:"숫자로 확인하고 싶어 해요",d:"몇 개나 되는지, 얼마나 변하는지 재고 싶어 해요"}
+];
+var Q2=[
+ {k:"비교",t:"둘을 비교해 봐요",d:"뭐가 같고 다른지 찾아요"},
+ {k:"반박",t:"정말 맞는지 확인해 봐요",d:"설명에 안 맞는 경우나 빠진 점을 찾아요"},
+ {k:"제작",t:"직접 해 봐요",d:"만들거나 실험하면서 확인해요"},
+ {k:"조사",t:"자료를 찾아봐요",d:"책이나 인터넷에서 관련 내용을 찾아요"}
+];
+var TRACKS=[
+ {k:"메디컬",t:"메디컬",d:"의·치·한·약·수의"},
+ {k:"이공",t:"이공",d:"공학 · 자연과학 · IT"},
+ {k:"상경",t:"상경",d:"경영 · 경제 · 통계 · 무역"},
+ {k:"인문·사범",t:"인문 · 사범",d:"어문 · 사회 · 교육"},
+ {k:"자유전공",t:"자유전공학부",d:"아직 안 좁혔습니다"}
+];
+var S={dept:"",track:-1,second:[],decided:false,q1:0,q2:0,majors:null,busy:false,dream:"",dreamKw:[],cards:[],warn:"",files:{f1:[]}};
+
+function scrub(t){
+  return String(t||"")
+    .replace(/문서확인번호[^\n]*/g,"")
+    .replace(/\d{4}-\d{4}-\d{4}-\d{4}/g,"")
+    .replace(/\b\d{6}\s*[-–]\s*\d{7}\b/g,"")
+    .replace(/(성\s*명|학\s*번|생년월일|주민등록번호)\s*[:：][^\n]*/g,"")
+    .replace(/[가-힣]{2,10}(고등학교|중학교)/g,"○○고등학교")
+    .replace(/\n{3,}/g,"\n\n").trim();
+}
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+
+function opts(el,list,key){
+  el.innerHTML=list.map(function(o,i){
+    return '<button class="opt" data-i="'+i+'" aria-pressed="'+(S[key]===i)+'"><span class="t">'+o.t+'</span><span class="d">'+o.d+'</span></button>';
+  }).join("");
+}
+function trackOpts(){
+  $("#track").innerHTML=TRACKS.map(function(o,i){
+    return '<button class="opt" data-t="'+i+'" aria-pressed="'+(S.track===i)+'"><span class="t">'+o.t+'</span><span class="d">'+o.d+'</span></button>';
+  }).join("");
+  var free=S.track>-1&&TRACKS[S.track].k==="자유전공";
+  $("#secondBox").style.display=free?"":"none";
+  if(free) $("#second").innerHTML=TRACKS.slice(0,4).map(function(o){
+    return '<button class="opt" data-s="'+o.k+'" aria-pressed="'+(S.second.indexOf(o.k)>-1)+'"><span class="t">'+o.t+'</span></button>';
+  }).join("");
+}
+trackOpts();
+$("#track").addEventListener("click",function(e){var b=e.target.closest("[data-t]");if(!b)return;S.track=+b.dataset.t;S.second=[];trackOpts();});
+$("#second").addEventListener("click",function(e){
+  var b=e.target.closest("[data-s]");if(!b)return;var k=b.dataset.s,i=S.second.indexOf(k);
+  if(i>-1) S.second.splice(i,1); else if(S.second.length<2) S.second.push(k);
+  trackOpts();
+});
+$("#dept").addEventListener("input",function(){S.dept=this.value.trim();paintEx();});
+opts($("#q1"),Q1,"q1"); opts($("#q2"),Q2,"q2");
+$("#q1").addEventListener("click",function(e){var b=e.target.closest("[data-i]");if(!b)return;S.q1=+b.dataset.i;opts($("#q1"),Q1,"q1");});
+$("#q2").addEventListener("click",function(e){var b=e.target.closest("[data-i]");if(!b)return;S.q2=+b.dataset.i;opts($("#q2"),Q2,"q2");});
+
+function setDecided(v){
+  S.decided=v; $("#dec").setAttribute("aria-pressed",v); $("#undec").setAttribute("aria-pressed",!v);
+  $("#deptBox").style.display = v ? "" : "none";
+  $("#deptHint").innerHTML = v
+    ? "적으신 학과에 맞춰 만듭니다. 자료에 주제표가 있는 학과면 그 표를, 없으면 계열 로드맵으로 3년 계단을 직접 세워 드립니다."
+    : "<b>고1은 안 정하셔도 됩니다.</b> 1학년에 필요한 건 학과 이름이 아니라 2학년에 이어붙일 단어 하나입니다. 계열만 고르시면 그 계열 안에서 어느 쪽으로 가도 이어지는 주제로 만들어 드립니다.";
+  paintEx();
+}
+$("#dec").addEventListener("click",function(){setDecided(true);});
+$("#undec").addEventListener("click",function(){setDecided(false);});
+setDecided(false);
+
+fetch("/api/majors").then(function(r){return r.json();}).then(function(m){S.majors=m;paintEx();}).catch(function(){});
+
+/* 어머님은 "생명공학과"라고 적으시는데 주제표 키는 "생명공학·생명과학"입니다. 서버와 같은 별명표로 잇습니다 */
+var ALIAS=[[/자유전공|자율전공|무전공/,null],[/치(의예|의학|대)/,"치대"],[/한의(예과|학과|대)/,"한의대"],
+ [/수의/,"수의대"],[/약(학과|학대학|대)/,"약대"],[/의(예과|학과|과대학)|^의대/,"의대"],
+ [/생명|바이오|분자생물|유전공학|생물학/,"생명공학·생명과학"],[/반도체/,"반도체공학과"],
+ [/인공지능|^AI|에이아이|데이터\s*사이언스/i,"인공지능"],[/컴퓨터|소프트웨어|소프트|컴공|정보통신|정보보호/,"컴퓨터공학과"],
+ [/전기|전자|반도체시스템/,"전기전자공학부"],[/통계|데이터/,"통계학과"],[/건축|토목|도시|환경공|조경|사회환경/,"건축·사회환경"],
+ [/교육(과|학과)?$|사범|초등교육|유아교육/,"교육계열"],[/경영|경제|무역|회계|금융|상경|세무|물류/,"상경계열"],
+ [/정치|외교|국제관계|행정/,"정치외교학과"],
+ [/국어국문|영어영문|중어중문|일어일문|불어불문|독어독문|노어노문|서어서문|어문|문예창작|언어학/,"어문계열"]];
+function findMajor(){
+  var m=S.majors,d=S.dept; if(!m||!d) return null;
+  if(m[d]) return m[d];
+  var hit=Object.keys(m).filter(function(k){return k.indexOf(d)>-1||d.indexOf(k)>-1;})[0];
+  if(hit) return m[hit];
+  var bare=d.replace(/\s+/g,"").replace(/(학부|학과|전공|계열|대학|과)$/,"");
+  for(var i=0;i<ALIAS.length;i++){ if(ALIAS[i][0].test(d)||ALIAS[i][0].test(bare)) return ALIAS[i][1]?(m[ALIAS[i][1]]||null):null; }
+  return null;
+}
+function paintEx(){
+  var m=S.decided&&findMajor();
+  $("#exDr").style.display=m?"":"none"; if(!m)return;
+  $("#exTable").innerHTML='<thead><tr><th>주제</th><th class="hi">1학년 · 지금 자리</th><th>2학년 · 다음 계단</th><th>3학년</th></tr></thead><tbody>'+
+    m.r.map(function(r){return '<tr><td>'+esc(r.a)+'</td><td class="y1">'+esc(r.y[0])+'</td><td>'+esc(r.y[1])+'</td><td>'+esc(r.y[2])+'</td></tr>';}).join("")+'</tbody>';
+}
+
+try{ var saved=localStorage.getItem("da_pw"); if(saved) $("#pw").value=saved; }catch(e){}
+
+var WAIT=["1학기 수행평가에서 키워드를 고르고 있습니다","여러 과목에 흩어진 것이 한 단어로 모이는지 보고 있습니다","창체 세 칸에 나눠 담고 있습니다","2학기 과목마다 할 일을 가르고 있습니다","자기평가서 네 줄을 쓰고 있습니다"];
+
+/* 파일·글에서 활동 카드를 만든 뒤 기존 고1 흐름으로 넘깁니다. */
+var GRADE=/(\d+\s*등급|석차|원점수\s*[0-9]*점?|이수\s*단위|백분위|과목\s*평균|표준\s*편차|\d+\s*\/\s*\d+\s*명|무단\s*(결석|지각|조퇴)|출결)/;
+var PDFJS_URL="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs";
+var PDFJS_WORKER="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+var MAMMOTH_URL="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js";
+var IMG_MAX=25*1024*1024, RAW_PDF_MAX=2*1024*1024, TEXT_MAX=400000, SCAN_MIN=200;
+/* 사진과 스캔본은 브라우저에서 긴 변 1568px JPEG 로 줄여 보냅니다(클로드도 그 크기로 봅니다).
+   파일 개수 제한은 없습니다. 서버 요청 본문 한도(4.5MB)와 클로드 한도(사진 100장)를 넘지 않게
+   브라우저가 묶음으로 나눠 여러 번 부르고 카드를 합칩니다. 아래가 한 묶음의 상한입니다 */
+var B64_MAX=2.5*1024*1024;
+var BATCH={b64:B64_MAX, images:40, pages:300, chars:300000, sources:100, parallel:2};
+var IMG_EDGE=1568, IMG_Q=0.85, SCAN_PAGES_MAX=60;
+var PDF_PAGES_UNKNOWN=100;
+window.DA_BATCH=BATCH; /* 테스트에서 묶음 상한을 낮출 때 씁니다 */
+var IMG_MIME={png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",webp:"image/webp",gif:"image/gif"};
+var BLOCKS=[{f:"f1",t:"t1",l:"fl1",term:"1학년 1학기"}];
+
+var CARD_SLOTS=["자율활동","동아리활동","진로활동","과목 세특"];
+var ENDED=["조사·발표","실험","숫자","사례 하나"];
+var fileSeq=0;
+
+var pdfLib=null;
+function loadPdfjs(){
+  if(!pdfLib){
+    pdfLib=import(PDFJS_URL).then(function(m){ m.GlobalWorkerOptions.workerSrc=PDFJS_WORKER; return m; });
+    pdfLib.catch(function(){ pdfLib=null; });
+  }
+  return pdfLib;
+}
+/* 한글(hwp·hwpx)과 워드(doc·docx)는 같은 서버의 parsers.js 가 브라우저 안에서 글자를 뽑습니다. 바깥 라이브러리가 없습니다 */
+var parserLib=null;
+function loadParsers(){
+  if(window.DAParse) return Promise.resolve(window.DAParse);
+  if(!parserLib){
+    parserLib=new Promise(function(ok,no){
+      var s=document.createElement("script"); s.src="/parsers.js";
+      s.onload=function(){ if(window.DAParse) ok(window.DAParse); else no(new Error("parsers")); };
+      s.onerror=function(){ no(new Error("parsers")); };
+      document.head.appendChild(s);
+    });
+    parserLib.catch(function(){ parserLib=null; });
+  }
+  return parserLib;
+}
+var mammothLib=null;
+function loadMammoth(){
+  if(window.mammoth) return Promise.resolve(window.mammoth);
+  if(!mammothLib){
+    mammothLib=new Promise(function(ok,no){
+      var s=document.createElement("script"); s.src=MAMMOTH_URL;
+      s.onload=function(){ if(window.mammoth) ok(window.mammoth); else no(new Error("mammoth")); };
+      s.onerror=function(){ no(new Error("mammoth")); };
+      document.head.appendChild(s);
+    });
+    mammothLib.catch(function(){ mammothLib=null; });
+  }
+  return mammothLib;
+}
+function readAs(file,how,enc){
+  return new Promise(function(ok,no){
+    var r=new FileReader();
+    r.onload=function(){ ok(r.result); }; r.onerror=function(){ no(r.error||new Error("read")); };
+    if(how==="text") r.readAsText(file,enc||"utf-8"); else if(how==="b64") r.readAsDataURL(file); else r.readAsArrayBuffer(file);
+  });
+}
+function readB64(file){ return readAs(file,"b64").then(function(u){ return String(u).replace(/^data:[^,]*,/,""); }); }
+/* 윈도에서 만든 txt는 euc-kr일 때가 있어, utf-8로 읽어 깨진 글자가 많으면 euc-kr로 한 번 더 읽습니다 */
+function readTxt(file){
+  return readAs(file,"text","utf-8").then(function(t){
+    t=String(t); return (t.match(/�/g)||[]).length>3 ? readAs(file,"text","euc-kr").then(String) : t;
+  });
+}
+/* 나이스 PDF는 글자 하나가 항목 하나로 들어 있어서, 항목마다 공백을 붙이면 "자 율 활 동"이 됩니다.
+   그래서 좌표를 보고 잇습니다. 세로 위치가 글자 높이의 반 이상 다르면 줄바꿈, 앞 글자 끝과의 틈이 글자 높이의 1/5을 넘으면 그때만 띄어 씁니다 */
+function pageText(doc,k){
+  return function(acc){
+    return doc.getPage(k).then(function(pg){ return pg.getTextContent(); }).then(function(tc){
+      var out="", px=null, py=0, pw=0;
+      tc.items.forEach(function(it){
+        var s=it.str||"", tr=it.transform;
+        if(!s){ return; }
+        if(!tr){ out+=s; return; }
+        var x=tr[4], y=tr[5], h=Math.abs(tr[3])||it.height||10, w=it.width||0;
+        if(px!==null){
+          if(Math.abs(y-py)>h*0.5) out+="\n";
+          else if(x-(px+pw)>h*0.2) out+=" ";
+        }
+        out+=s; px=x; py=y; pw=w;
+        if(it.hasEOL){ out+="\n"; px=null; }
+      });
+      return acc+out+"\n";
+    });
+  };
+}
+/* 글자는 뽑혔는데 한글 비율이 낮거나 깨진 글자가 많으면(폰트 매핑이 없는 PDF) 스캔본처럼 파일째 보냅니다 */
+function looksBroken(t){
+  var ns=t.replace(/\s/g,""), letters=(ns.match(/[가-힣A-Za-z0-9]/g)||[]).length, han=(ns.match(/[가-힣]/g)||[]).length, bad=(ns.match(/[\uE000-\uF8FF\uFFFD]/g)||[]).length;
+  return letters>0 && (han/letters<0.3 || bad/ns.length>0.02);
+}
+function pdfText(buf){
+  return loadPdfjs().then(function(lib){
+    return lib.getDocument({data:new Uint8Array(buf)}).promise.then(function(doc){
+      var p=Promise.resolve(""), k;
+      for(k=1;k<=doc.numPages;k++) p=p.then(pageText(doc,k));
+      var n=doc.numPages;
+      return p.then(function(t){ doc.destroy(); return {text:t,pages:n}; },function(e){ doc.destroy(); throw e; });
+    });
+  });
+}
+/* 사진을 긴 변 IMG_EDGE 픽셀 JPEG 로 줄여 base64 로 돌려줍니다. 화면 캡처(png)도 여기서 jpeg 가 됩니다 */
+function shrinkImage(blob){
+  return new Promise(function(ok,no){
+    var url=URL.createObjectURL(blob), img=new Image();
+    img.onload=function(){
+      try{
+        var w=img.naturalWidth, h=img.naturalHeight, k=Math.min(1,IMG_EDGE/Math.max(w,h));
+        var cw=Math.max(1,Math.round(w*k)), chh=Math.max(1,Math.round(h*k));
+        var c=document.createElement("canvas"); c.width=cw; c.height=chh;
+        var g=c.getContext("2d"); g.fillStyle="#fff"; g.fillRect(0,0,cw,chh); g.drawImage(img,0,0,cw,chh);
+        var u=c.toDataURL("image/jpeg",IMG_Q); if(u.length>1.6*1024*1024) u=c.toDataURL("image/jpeg",0.7);
+        URL.revokeObjectURL(url); ok({mime:"image/jpeg",data:u.replace(/^data:[^,]*,/,""),w:cw,h:chh});
+      }catch(e){ URL.revokeObjectURL(url); no(e); }
+    };
+    img.onerror=function(){ URL.revokeObjectURL(url); no(new Error("image")); };
+    img.src=url;
+  });
+}
+/* 글자가 없는(스캔본) PDF 는 쪽마다 그림으로 바꿔 사진처럼 보냅니다 */
+function pdfToImages(buf){
+  return loadPdfjs().then(function(lib){
+    return lib.getDocument({data:new Uint8Array(buf)}).promise.then(function(doc){
+      var n=doc.numPages; if(n>SCAN_PAGES_MAX){ doc.destroy(); throw {bad:"스캔본이 "+n+"쪽이라 너무 깁니다. 필요한 쪽만 잘라 "+SCAN_PAGES_MAX+"쪽 아래로 올려 주세요."}; }
+      var parts=[], p=Promise.resolve(), k;
+      var one=function(i){ return function(){
+        return doc.getPage(i).then(function(pg){
+          var v0=pg.getViewport({scale:1}), k=IMG_EDGE/Math.max(v0.width,v0.height), v=pg.getViewport({scale:k});
+          var c=document.createElement("canvas"); c.width=Math.round(v.width); c.height=Math.round(v.height);
+          return pg.render({canvasContext:c.getContext("2d"),viewport:v}).promise.then(function(){
+            parts.push({mime:"image/jpeg",data:c.toDataURL("image/jpeg",IMG_Q).replace(/^data:[^,]*,/,"")});
+          });
+        });
+      }; };
+      for(k=1;k<=n;k++) p=p.then(one(k));
+      return p.then(function(){ doc.destroy(); return {parts:parts,pages:n}; },function(e){ doc.destroy(); throw e; });
+    });
+  });
+}
+function fmtSize(n){ return n>=1048576 ? (n/1048576).toFixed(1)+"MB" : Math.max(1,Math.round(n/1024))+"KB"; }
+function fmtNum(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,","); }
+function extOf(name){ var m=String(name||"").toLowerCase().match(/\.([a-z0-9]+)$/); return m?m[1]:""; }
+function asText(t){ t=scrub(t); if(t.length>TEXT_MAX) throw {bad:"40만 자를 넘는 파일입니다. 나눠 올려 주세요."}; return {kind:"text",text:t,how:"글자 "+fmtNum(t.length)+"자"}; }
+
+/* 파일 하나를 읽어 kind·text·data를 채웁니다. 못 읽는 파일은 이유만 적고 보내지 않습니다 */
+function readEntry(en,file){
+  var ext=en.ext, mime=file.type||IMG_MIME[ext]||"", p, im;
+  if(ext==="hwp"||ext==="hwpx"||ext==="doc"||ext==="docx"){
+    p=loadParsers().then(function(P){ return P.read(file); }).then(function(t){ var r=asText(t); if(!r.text) throw {bad:"이 파일에는 글자가 없습니다."}; return r; })
+      .catch(function(e){
+        if(ext!=="docx") throw {bad:(e&&e.message)||"이 파일을 못 읽었습니다. PDF로 저장한 뒤 올려 주세요."};
+        /* docx 만 예비로 mammoth 를 한 번 더 써 봅니다 */
+        return readAs(file,"buf").then(function(buf){ return loadMammoth().then(function(mm){ return mm.extractRawText({arrayBuffer:buf}); }); })
+          .then(function(r){ r=asText(r&&r.value); if(!r.text) throw new Error("empty"); return r; })
+          .catch(function(){ throw {bad:"워드 파일을 못 읽었습니다. 워드에서 PDF로 저장한 뒤 올려 주세요."}; });
+      });
+  }
+  else if(ext==="pdf"){
+    p=readAs(file,"buf").then(pdfText).then(function(o){
+      var r=asText(o.text);
+      if(r.text.replace(/\s/g,"").length>=SCAN_MIN && !looksBroken(r.text)) return r;
+      return readAs(file,"buf").then(pdfToImages).then(function(o2){ return {kind:"image",parts:o2.parts,pages:o2.pages,how:"스캔본 · "+o2.pages+"쪽을 그림으로 보냄"}; });
+    },function(e){
+      if(e&&e.bad) throw e;
+      if(file.size>RAW_PDF_MAX) throw {bad:"이 PDF 를 못 읽었습니다. 다른 프로그램에서 PDF 로 다시 저장하거나 사진으로 찍어 올려 주세요."};
+      return readB64(file).then(function(b){ return {kind:"pdf",mime:"application/pdf",data:b,pages:PDF_PAGES_UNKNOWN,how:"파일 그대로 보냄"}; });
+    });
+  }
+  else if(ext==="txt"||/^text\//.test(mime)){
+    p=readTxt(file).then(function(t){ var r=asText(t); if(!r.text) throw {bad:"빈 파일입니다."}; return r; });
+  }
+  else if(IMG_MIME[ext]||/^image\//.test(mime)){
+    im=IMG_MIME[ext]||mime;
+    if(!/^image\/(png|jpeg|webp|gif)$/.test(im)) p=Promise.reject({bad:"이 사진 형식은 못 읽습니다. png나 jpg로 바꿔 올려 주세요."});
+    else if(file.size>IMG_MAX) p=Promise.reject({bad:"사진이 25MB를 넘습니다. 크기를 줄여 주세요."});
+    else p=shrinkImage(file).then(function(o){ return {kind:"image",parts:[{mime:o.mime,data:o.data}],how:"사진 · "+o.w+"×"+o.h+"로 줄여 보냄"}; },function(){ throw {bad:"사진을 못 읽었습니다. png나 jpg로 바꿔 올려 주세요."}; });
+  }
+  else p=Promise.reject({bad:"이 형식은 못 읽습니다. PDF·한글(hwp/hwpx)·워드(doc/docx)·txt·사진(png/jpg/webp)으로 올려 주세요."});
+  return p.then(function(r){ en.st="ok"; en.kind=r.kind; en.text=r.text||""; en.data=r.data||""; en.mime=r.mime||""; en.parts=r.parts||null; en.pages=r.pages||0; en.how=r.how; },
+    function(e){ en.st="bad"; en.kind=""; en.text=""; en.data=""; en.how=(e&&e.bad)||"이 파일은 못 읽었습니다. PDF로 저장해서 올려 주세요."; });
+}
+function renderFiles(bk){
+  $("#"+bk.l).innerHTML=S.files[bk.f].map(function(x){
+    var cls=x.st==="bad"?"fh bad":(x.st==="read"?"fh rd":"fh");
+    return '<li><span class="fn">'+esc(x.name)+'</span><span class="fs">'+fmtSize(x.size)+'</span><span class="'+cls+'">'+esc(x.how)+'</span>'+
+      '<button type="button" data-rm="'+x.id+'" title="빼기">✕</button></li>';
+  }).join("");
+}
+function addFiles(bk,list){
+  if(S.busy) return;
+  invalidateSources();
+  var i,f,en;
+  for(i=0;i<list.length;i++){ f=list[i];
+    if(S.files[bk.f].some(function(x){ return x.name===f.name&&x.size===f.size; })) continue;
+    en={id:++fileSeq,name:f.name,size:f.size,ext:extOf(f.name),st:"read",how:"읽는 중",kind:"",text:"",data:"",mime:""};
+    S.files[bk.f].push(en);
+    readEntry(en,f).then(function(){ renderFiles(bk); });
+  }
+  renderFiles(bk);
+}
+BLOCKS.forEach(function(bk){
+  $("#"+bk.f).addEventListener("change",function(){ addFiles(bk,this.files); this.value=""; });
+  $("#"+bk.l).addEventListener("click",function(e){
+    var b=e.target.closest("[data-rm]"); if(!b||S.busy) return;
+    invalidateSources();
+    S.files[bk.f]=S.files[bk.f].filter(function(x){ return x.id!==+b.dataset.rm; }); renderFiles(bk);
+  });
+});
+/* 파일과 붙여넣은 글을 /api/cards1 요청으로 모읍니다. */
+function collectSources(){
+  var out=[], reading=false, b64=0;
+  BLOCKS.forEach(function(bk){
+    S.files[bk.f].forEach(function(x){
+      if(x.st==="read") reading=true;
+      if(x.st!=="ok") return;
+      if(x.kind==="image"&&x.parts){
+        x.parts.forEach(function(pt,i){ out.push({term:bk.term,kind:"image",name:x.name+(x.parts.length>1?" · "+(i+1)+"쪽":""),mime:pt.mime,data:pt.data}); b64+=pt.data.length; });
+        return;
+      }
+      var s={term:bk.term,kind:x.kind,name:x.name};
+      if(x.kind==="text") s.text=x.text; else { s.mime=x.mime; s.data=x.data; b64+=x.data.length; if(x.kind==="pdf") s.pages=x.pages||PDF_PAGES_UNKNOWN; }
+      out.push(s);
+    });
+    var t=scrub($("#"+bk.t).value);
+    if(t) out.push({term:bk.term,kind:"text",name:"붙여넣은 글",text:t});
+  });
+  return {sources:out,reading:reading,b64:b64};
+}
+function normCards(arr){
+  var lst=[],a,x,names,nums;
+  for(a=0;a<arr.length;a++){ x=arr[a]||{};
+    names=(Array.isArray(x["이름"])?x["이름"]:[]).map(String).filter(function(v){return v.trim()&&!GRADE.test(v);}).slice(0,8);
+    nums=(Array.isArray(x["숫자"])?x["숫자"]:[]).map(String).filter(function(v){return v.trim()&&!GRADE.test(v);}).slice(0,12);
+    var did=scrub(String(x["한일"]||"")).replace(new RegExp(GRADE.source,"g"),"○○");
+    var topic=scrub(String(x["주제"]||"")).slice(0,80);
+    if(!did&&!topic&&!names.length) continue;
+    lst.push({"칸":CARD_SLOTS.indexOf(x["칸"])>-1?x["칸"]:"과목 세특","과목":String(x["과목"]||"").trim().replace(/^(과목없음|미상|불명|없음)$/,"").slice(0,20),
+      "수행평가":scrub(String(x["수행평가"]||"")).slice(0,60),"주제":topic,
+      "이름":names,"숫자":nums,"한일":did,"끝난모양":ENDED.indexOf(x["끝난모양"])>-1?x["끝난모양"]:"",off:false});
+  }
+  return lst;
+}
+/* 자료를 한 묶음의 상한(BATCH) 안에 들어가게 순서대로 나눕니다 */
+function splitBatches(sources){
+  var out=[], cur=null;
+  function fresh(){ cur={list:[],b64:0,images:0,pages:0,chars:0}; out.push(cur); }
+  fresh();
+  sources.forEach(function(s){
+    var b=s.kind==="text"?0:s.data.length, im=s.kind==="image"?1:0, pg=s.kind==="pdf"?(s.pages||PDF_PAGES_UNKNOWN):0, ch=s.kind==="text"?s.text.length:0;
+    var fits=cur.list.length===0 || (cur.b64+b<=BATCH.b64 && cur.images+im<=BATCH.images && cur.pages+pg<=BATCH.pages && cur.chars+ch<=BATCH.chars && cur.list.length<BATCH.sources);
+    if(!fits) fresh();
+    cur.list.push(s); cur.b64+=b; cur.images+=im; cur.pages+=pg; cur.chars+=ch;
+  });
+  return out.map(function(x){ return x.list; });
+}
+/* 묶음을 parallel 개씩 동시에 보내고, 결과를 묶음 순서대로 모읍니다 */
+function runBatches(pw,batches,onProgress){
+  var results=new Array(batches.length), next=0, done=0, failed=null;
+  function one(){
+    if(failed) return Promise.resolve();
+    var i=next++; if(i>=batches.length) return Promise.resolve();
+    var body={pw:pw,sources:batches[i]}; if(batches.length>1) body.batch={i:i+1,n:batches.length};
+    return fetch("/api/cards1",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(body)})
+      .then(function(r){ return r.json(); },function(){ throw new Error("연결이 끊겼습니다. 잠시 뒤 다시 시도해 주세요."); })
+      .then(function(d){
+        if(d&&d.error) throw new Error(d.error+(batches.length>1?" (묶음 "+(i+1)+"/"+batches.length+")":""));
+        results[i]=d; done++; onProgress(done);
+      })
+      .then(one);
+  }
+  var lanes=[], k;
+  for(k=0;k<Math.min(BATCH.parallel,batches.length);k++) lanes.push(one().catch(function(e){ failed=failed||e; }));
+  return Promise.all(lanes).then(function(){ if(failed) throw failed; return results; });
+}
+
+function invalidateResult(){
+  S.dream=""; S.dreamKw=[]; $("#result").innerHTML=""; $("#again").style.display="none";
+}
+function invalidateSources(){
+  S.cards=[]; S.warn=""; $("#cardView").innerHTML=""; $("#cmsg").innerHTML="";
+  $("#cardMsg").textContent="자료를 바꿨습니다. 활동 카드 만들기를 다시 눌러 주세요.";
+  invalidateResult();
+}
+$("#t1").addEventListener("input",invalidateSources);
+function makeCards(){
+  if(S.busy) return;
+  var box=$("#cmsg"); box.innerHTML="";
+  var pw=$("#pw").value.trim(), c=collectSources();
+  if(c.reading) return err("파일을 읽고 있습니다. 읽기가 끝나면 다시 눌러 주세요.",box);
+  if(S.files.f1.some(function(x){return x.st==="bad";})) return err("읽지 못한 파일이 있습니다. 파일 옆 안내를 확인하고, 그 파일을 빼거나 다른 형식으로 올려 주세요.",box);
+  if(!c.sources.length) return err("1학기 수행평가 기록을 올리거나 글을 적어 주세요.",box);
+  if(!pw) return err("이번 달 비밀번호를 넣어 주세요. 카페 공지에 있습니다.",box);
+  if(c.sources.some(function(s){return s.kind==="text"&&s.text.length>TEXT_MAX;})) return err("글이 40만 자를 넘습니다. 나눠 올려 주세요.",box);
+  if(c.sources.some(function(s){return s.kind!=="text"&&s.data.length>B64_MAX;})) return err("파일 하나가 너무 큽니다. 크기를 줄여 올려 주세요.",box);
+  invalidateResult();
+  var batches=splitBatches(c.sources), n=batches.length;
+  var note=n>1?"자료를 "+n+"묶음으로 나눠 읽습니다. 이 창을 닫지 말고 기다려 주세요.":"자료 양에 따라 시간이 걸립니다. 이 창을 닫지 말고 기다려 주세요.";
+  var tick=busyOn(["1학기 기록을 읽고 있습니다","활동별로 카드를 만들고 있습니다","과목과 주제를 확인하고 있습니다"],4000,note,box);
+  runBatches(pw,batches,function(done){S.waitNote=done+"/"+n+" 묶음을 읽었습니다. "+note;})
+    .then(function(results){
+      busyOff(tick);
+      var cards=[], warns=[];
+      results.forEach(function(d){cards=cards.concat(normCards(d.cards||[])); if(d.warn) warns.push(d.warn);});
+      var seen=new Set(); cards=cards.filter(function(c){var k=JSON.stringify(c);if(seen.has(k)) return false;seen.add(k);return true;});
+      if(!cards.length) return err("읽을 수 있는 활동이 없습니다. 글자가 보이는 자료를 올려 주세요.",box);
+      S.cards=cards; S.warn=warns.filter(function(w,i){return warns.indexOf(w)===i;}).join(" ");
+      box.innerHTML=""; $("#cardMsg").textContent="활동 카드 "+cards.length+"장을 만들었습니다.";
+      renderCards();
+    }).catch(function(e){busyOff(tick);err(esc(e.message||"연결이 끊겼습니다. 다시 눌러 주세요."),box);});
+}
+$("#makeCards").addEventListener("click",makeCards);
+function renderCards(){
+  var on=S.cards.filter(function(c){return !c.off;});
+  var miss=on.filter(function(c){return c["칸"]==="과목 세특"&&!c["과목"];}).length;
+  $("#cardView").innerHTML=(S.warn?'<div class="note">'+esc(S.warn)+'</div>':"")+'<div class="tablewrap"><table class="cardtbl"><thead><tr><th>과목</th><th>수행평가</th><th>아이가 정한 주제</th><th>이름</th><th>숫자</th><th>한 일</th><th></th></tr></thead><tbody>'+
+    S.cards.map(function(c,i){
+      var need=c["칸"]==="과목 세특"&&!c["과목"];
+      var sub=need
+        ? '<input class="sj" data-sj="'+i+'" placeholder="과목 적기" value="">'
+        : (c["과목"]?esc(c["과목"]):'<span class="num">'+esc(c["칸"])+'</span>');
+      return '<tr class="'+(c.off?"off ":"")+(need?"nosubj":"")+'">'+
+        '<td>'+sub+(c["과목"]&&c["칸"]!=="과목 세특"?'<br><span class="num">'+esc(c["칸"])+'</span>':"")+'</td>'+
+        '<td>'+esc(c["수행평가"]||"—")+'</td><td>'+esc(c["주제"]||"—")+'</td>'+
+        '<td>'+esc(c["이름"].join(" · "))+'</td><td class="num">'+esc(c["숫자"].join(" · ")||"—")+'</td>'+
+        '<td>'+esc(c["한일"])+'</td><td><button data-off="'+i+'" title="빼기">'+(c.off?"↩":"✕")+'</button></td></tr>';
+    }).join("")+'</tbody></table></div>'+
+    '<div class="okline"><b>여기 보이는 '+on.length+'장이 꿈문장·탐구 방향 단계로 넘어갑니다.</b> 빼고 싶은 줄은 ✕를 누르세요. 과목명이 맞는지 확인해 주세요.</div>'+
+    (on.length<3?'<div class="warnline">꿈문장을 만들려면 활동 카드가 3장 이상 있어야 합니다. 기록을 더 올려 다시 만들어 주세요.</div>':"")+
+    (on.length>40?'<div class="warnline">한 번에 40장까지 씁니다. 이번 탐구에 쓸 카드를 40장 이하로 골라 주세요.</div>':"")+
+    (miss?'<div class="warnline">과목 이름이 안 잡힌 줄이 '+miss+'개 있습니다. 빨간 칸에 과목을 직접 적어 주세요. 비워 두시면 그 줄은 과목 배치에 안 쓰고 이름 재료로만 씁니다.</div>':'');
+}
+$("#cardView").addEventListener("click",function(e){
+  var b=e.target.closest("[data-off]"); if(!b||S.busy) return;
+  invalidateResult();
+  S.cards[+b.dataset.off].off=!S.cards[+b.dataset.off].off; renderCards();
+});
+/* 과목 칸은 다시 그리면 입력이 날아가니 값만 담아 둡니다 */
+$("#cardView").addEventListener("input",function(e){
+  var b=e.target.closest("[data-sj]"); if(!b||S.busy) return;
+  invalidateResult();
+  S.cards[+b.dataset.sj]["과목"]=b.value.trim().slice(0,20);
+});
+
+function common(){
+  return {pw:$("#pw").value.trim(), dept:S.decided?S.dept:"", track:S.track>-1?TRACKS[S.track].k:"",
+    second:S.second.join(" · "), decided:S.decided,
+    cards:S.cards.filter(function(c){return !c.off;}).map(function(c){
+      return {"칸":c["칸"],"과목":c["과목"],"수행평가":c["수행평가"],"주제":c["주제"],"이름":c["이름"],"숫자":c["숫자"],"한일":c["한일"],"끝난모양":c["끝난모양"]};
+    })};
+}
+function validate(b,needSubj){
+  if(b.cards.length<3) return "활동 카드가 3장 이상 필요합니다. 기록을 올리고 활동 카드 만들기를 눌러 주세요.";
+  if(b.cards.length>40) return "이번 탐구에 쓸 카드를 40장 이하로 골라 주세요.";
+  if(S.track<0) return "계열을 골라 주세요.";
+  if(TRACKS[S.track].k==="자유전공"&&S.second.length!==2) return "고민 중인 두 계열을 골라 주세요.";
+  if(S.decided&&!S.dept) return "희망 학과를 적어 주세요. 아직이시면 '아직 고민 중입니다'를 누르시면 됩니다.";
+  if(needSubj&&$("#subj2").value.trim().split(/[,·]+/).filter(function(x){return x.trim();}).length<2)
+    return "2학기에 듣는 과목을 쉼표로 나눠 적어 주세요.";
+  if(!b.pw) return "이번 달 비밀번호를 넣어 주세요. 카페 공지에 있습니다.";
+  return "";
+}
+function setBusyBtns(v){
+  document.querySelectorAll("#cardView input, #cardView button, #fl1 button").forEach(function(el){el.disabled=v;});
+  ["#makeCards","#goDream","#goPlan","#again","#f1","#t1"].forEach(function(s){ var el=$(s); if(el) el.disabled=v; });
+}
+/* 진행 문구는 S.waitNote 에 두고, 만드는 쪽에서 바꾸면 다음 틱에 반영됩니다 */
+function busyOn(list,ms,note,box){
+  S.busy=true; setBusyBtns(true); S.waitNote=note;
+  var i=0, t0=Date.now();
+  (box||$("#msg")).innerHTML='<div class="load"><span class="spin"></span><span id="waitTxt">'+list[0]+'</span></div>'+
+    (note?'<p class="hint" id="waitNote">'+note+'</p>':'');
+  return setInterval(function(){
+    i=(i+1)%list.length;
+    var t=$("#waitTxt"); if(t) t.textContent=list[i];
+    var n=$("#waitNote"); if(n) n.textContent=S.waitNote+" ("+Math.round((Date.now()-t0)/1000)+"초째)";
+  },ms);
+}
+function busyOff(tick){ clearInterval(tick); S.busy=false; setBusyBtns(false); }
+function err(html,box){ (box||$("#msg")).innerHTML='<div class="err">'+html+'</div>'; }
+
+function goDream(){
+  if(S.busy) return;
+  var b=common(); $("#msg").innerHTML="";
+  var e=validate(b,false); if(e) return err(e);
+  try{ localStorage.setItem("da_pw",b.pw); }catch(x){}
+  var tick=busyOn(["1학기 수행평가를 읽고 있습니다","관심이 어디로 모이는지 보고 있습니다","꿈문장을 좁히고 있습니다"],3500,"20초쯤 걸립니다. 이 창을 닫지 말고 기다려 주세요.");
+  fetch("/api/dream1",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(b)})
+   .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+   .then(function(res){
+     busyOff(tick);
+     if(res.d&&res.d.error) return err(esc(res.d.error));
+     $("#msg").innerHTML=""; renderDream(res.d);
+   }).catch(function(){ busyOff(tick); err("연결이 끊겼습니다. 잠시 뒤 다시 시도해 주세요."); });
+}
+function renderDream(d){
+  var h='<div class="card"><h2><span class="n">2</span> 꿈문장<span class="sm">하나만 고르시면 됩니다. 고쳐 쓰셔도 됩니다</span></h2>'+
+   '<p class="lede">'+esc(d.read||"")+' 고1 꿈문장은 3년을 버텨야 해서 <b>넓게</b> 잡았습니다. 2학년에 활동이 바뀌어도 이 문장이 살아 있으면 통과입니다.</p>'+
+   d.dreams.map(function(x,i){
+     return '<button class="pick" data-d="'+i+'" aria-pressed="'+(i===0)+'"><span class="pt">'+esc(x.line)+'</span>'+
+       '<span class="pb">1학기 근거 · '+esc(x.basis)+'</span>'+
+       '<span class="ckws">'+(x.keywords||[]).map(function(k){return '<span class="ckw">'+esc(k)+'</span>';}).join("")+'</span></button>';
+   }).join("")+
+   '<div style="margin-top:14px"><label class="fl" for="dreamEdit">고른 꿈문장 — 고쳐 쓰셔도 됩니다</label>'+
+   '<input type="text" id="dreamEdit" value="'+esc(d.dreams[0].line)+'"></div>'+
+   '<div class="row"><button class="btn u" id="goPlan">② 2학기 방향 뽑기</button></div></div>';
+  $("#result").innerHTML=h;
+  S.dream=d.dreams[0].line; S.dreamKw=d.dreams[0].keywords||[];
+  $("#result").onclick=function(e){
+    var b=e.target.closest("[data-d]"); if(!b) return;
+    var i=+b.dataset.d;
+    [].forEach.call(document.querySelectorAll("[data-d]"),function(el,j){el.setAttribute("aria-pressed",i===j);});
+    S.dream=d.dreams[i].line; S.dreamKw=d.dreams[i].keywords||[];
+    var edit=$("#dreamEdit"); if(edit) edit.value=S.dream;
+  };
+  $("#goPlan").addEventListener("click",goPlan);
+  $("#result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function goPlan(){
+  if(S.busy) return;
+  var b=common();
+  var e=validate(b,true); if(e) return err(e);
+  var ed=$("#dreamEdit"); if(ed&&ed.value.trim()) S.dream=ed.value.trim();
+  b.dream=S.dream; b.dreamKeywords=S.dreamKw; b.subjects2=$("#subj2").value.trim();
+  b.q1=Q1[S.q1].k; b.q2=Q2[S.q2].k;
+  $("#msg").innerHTML="";
+  var tick=busyOn(WAIT,4500,"2분에서 3분 걸립니다. 이 창을 닫지 말고 기다려 주세요. 화면이 멈춘 것처럼 보여도 만들고 있습니다.");
+  fetch("/api/plan1",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(b)})
+   .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+   .then(function(res){
+     busyOff(tick);
+     if(res.d&&res.d.error) return err(esc(res.d.error));
+     $("#msg").innerHTML=""; render(res.d); $("#again").style.display="";
+   }).catch(function(){ busyOff(tick); err("연결이 끊겼습니다. 잠시 뒤 다시 시도해 주세요."); });
+}
+$("#goDream").addEventListener("click",goDream);
+$("#again").addEventListener("click",goPlan);
+
+function slotRow(name,agenda,detail,foot){
+  return '<div class="slot"><span class="sn">'+esc(name)+'</span><div>'+
+    '<p class="sd"><b class="qm">Q</b> '+esc(agenda)+'</p>'+
+    '<p class="sdet">'+esc(detail)+'</p>'+
+    (foot?'<p class="sf">'+foot+'</p>':'')+
+    '</div></div>';
+}
+
+function render(d){
+  var names=d.names||[], dirs=d.directions||[];
+  var h='<div class="card"><h2><span class="n">3</span> 1학기에서 찾은 키워드<span class="sm">'+names.length+'개</span></h2>'+
+    '<p class="lede">전부 카드에 실제로 적혀 있던 말입니다. 원문에 없는 말은 화면에 안 올립니다.</p>'+
+    '<div class="chips">'+names.map(function(n){
+      return '<span class="chip">'+esc(n.name)+'<small>'+esc(n.subject||n.slot)+'</small></span>';
+    }).join("")+'</div></div>';
+
+  h='<div class="card" style="border-color:var(--up)"><span class="dl">꿈문장</span><p style="margin:4px 0 0;font-size:16.5px;font-weight:750;line-height:1.6">'+esc(S.dream)+'</p>'+
+    (S.dreamKw.length?'<div class="ckws">'+S.dreamKw.map(function(k){return '<span class="ckw">'+esc(k)+'</span>';}).join("")+'</div>':'')+'</div>'+h;
+  if(d.axis) h='<div class="card" style="border-color:var(--up)"><h2>'+esc(d.track)+' 계열 · 1학년은 '+esc(d.axis)+'</h2>'+
+    '<p class="lede" style="margin:0">'+(d.hasTable?'이 학과 주제표의 <b>1학년 칸</b>에 맞춰 만들었습니다.':'이 학과는 주제표가 없어 계열 로드맵으로 3년 계단을 직접 세우고 그 1학년 칸에 맞췄습니다.')+'</p></div>'+h;
+
+  h+='<div class="card"><h2><span class="n">4</span> 주제 '+dirs.length+'개<span class="sm">하나만 고르시면 됩니다</span></h2>'+
+    '<p class="lede">주제 하나를 고르면 그 주제를 <b>창체 세 칸과 2학기 과목별로 나눠 담은 것</b>이 아래에 있습니다. 같은 이름이라도 칸마다 하는 일이 다릅니다. 전부 하실 필요 없습니다. <b>한 과목에 주제는 하나</b>입니다.</p>'+
+    '<div class="dirs">'+dirs.map(function(c){
+      var kw=(c.keywords||[]).map(function(k){return '<em>'+esc(k)+'</em>';}).join('<span class="x">×</span>');
+      var ch=(c.changje||[]).map(function(s){return slotRow(s.slot,s.agenda,s.detail,s.fills?'채우는 칸 <b>'+esc(s.fills)+'</b>':"");}).join("");
+      var sj=(c.subjects||[]).map(function(s){return slotRow(s.subject,s.agenda,s.detail,
+        (s.unit?'펼 단원 <b>'+esc(s.unit)+'</b>':"")+(s.kind&&s.kind!=="그 밖"?(s.unit?' · ':'')+esc(s.kind):""));}).join("");
+
+      return '<div class="dir">'+
+        '<div class="hd"><span class="kw">'+kw+'</span><span class="tag">'+esc(c.move)+'</span></div>'+
+        '<p class="line">'+esc(c.line)+'</p>'+
+        (c.seed?'<div class="seedbox"><b>1학년에 남길 단어</b><span>'+esc(c.seed)+'</span></div>':'')+
+        (c.gather?'<div class="gather"><b>하나로 모으기 —</b> '+esc(c.gather)+'</div>':'')+
+        (c.why?'<div class="wada"><b>W</b><span>'+esc(c.why)+'</span></div>':'')+
+        (ch?'<div class="grp"><h4>창체 세 칸</h4><p class="why">세 칸을 똑같이 채우면 평가 항목 한 칸만 채워집니다. 나눠 채우면 세 칸입니다.</p>'+ch+'</div>':'')+
+        (sj?'<div class="grp subj"><h4>2학기 과목</h4><p class="why">공통과목은 진로 단어를 다 지워도 그 과목 실력이 남아야 합니다. 음악·미술·체육·정보는 진로를 마음껏 넣어도 됩니다.</p>'+sj+'</div>':'')+
+        (c.stepMade?'<div class="wada"><b>계단</b><span>'+esc(c.stepMade)+'</span></div>':'')+
+        (c.after?'<div class="wada af"><b>A</b><span>'+esc(c.after)+'</span></div>':'')+
+        (c.jagi4?'<details class="sum"><summary>수행평가 자기평가서 작성 예시 <em>네 가지 작성 항목</em></summary><pre>'+esc(c.jagi4)+'</pre></details>':'')+
+        (c.summary5?'<details class="sum"><summary>탐구보고서 요약 예시 <em>5줄 요약</em></summary><pre>'+esc(c.summary5)+'</pre></details>':'')+
+        ((c.rowY1||c.rowY2)?'<div class="ladder">'+
+          (c.rowY1?'<b class="now">지금 여기</b><span class="now">'+esc(c.rowY1)+'</span>':'')+
+          (c.rowY2?'<b class="nxt">2학년엔 여기까지</b><span class="nxt">'+esc(c.rowY2)+'</span>':'')+
+        '</div>':'')+
+        '<div class="foot2"><span>1학기에 <b>'+esc(c.endedAs)+'</b>로 끝남</span>'+
+          '<span>검색어 <b>'+esc(c.search)+'</b></span></div>'+
+      '</div>';
+    }).join("")+'</div>'+
+    '<div class="note"><b>고르신 뒤 오늘 하실 일은 하나입니다.</b> 그 과목 교과서에서 이름이 나오는 단원을 펴고, 단원 끝 페이지와 맨 뒤 출처를 보세요. 단원 끝 페이지에 배운 개념을 실생활에 적용한 사례가 모여 있습니다. 거기서 자료 하나만 고르면 시작됩니다.</div>'+
+    '<div class="row"><button class="btn g sm" id="copyAll">전체 복사</button><button class="btn g sm" id="pr">인쇄</button></div>'+
+  '</div>';
+
+  $("#result").innerHTML=h;
+
+  if(d.gloss&&d.gloss.length){
+    $("#glDr").style.display="";
+    $("#glBody").innerHTML=d.gloss.map(function(r){return '<b>'+esc(r[0])+'</b><span>'+esc(r[1])+'</span>';}).join("");
+  } else $("#glDr").style.display="none";
+
+  $("#copyAll").addEventListener("click",function(){
+    var t="[꿈문장] "+S.dream+"\n\n"+dirs.map(function(c,i){
+      var s=(i+1)+". "+(c.keywords||[]).join(" × ")+" — "+c.line+"\n";
+      if(c.seed) s+="   [1학년에 남길 단어] "+c.seed+"\n";
+      if(c.gather) s+="   [하나로 모으기] "+c.gather+"\n";
+      if(c.why) s+="   [W 동기] "+c.why+"\n";
+      (c.changje||[]).forEach(function(x){ s+="   ["+x.slot+"] Q "+x.agenda+"\n        → "+x.detail+"\n"; });
+      (c.subjects||[]).forEach(function(x){ s+="   ["+x.subject+(x.unit?" · "+x.unit:"")+"] Q "+x.agenda+"\n        → "+x.detail+"\n"; });
+      if(c.after) s+="   [A 확장] "+c.after+"\n";
+      if(c.jagi4) s+="\n   [자기평가서 네 줄]\n"+c.jagi4+"\n";
+      if(c.summary5) s+="\n   [탐구요약 5줄]\n"+c.summary5+"\n";
+      return s;
+    }).join("\n");
+    navigator.clipboard.writeText(t).then(function(){ this.textContent="복사했습니다"; }.bind(this));
+  });
+  $("#pr").addEventListener("click",function(){window.print();});
+  $("#result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+})();
+</script>
+</body>
+</html>
