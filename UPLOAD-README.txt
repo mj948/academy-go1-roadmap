@@ -1,6 +1,8 @@
-Vercel 배포용 변환본
+Vercel 배포용 수정본 v2
 
-GitHub academy-go1-roadmap 저장소의 기존 go1.html을 포함하여 이 폴더 안 파일을 모두 저장소 최상위에 업로드하세요.
+이 폴더 안의 파일/폴더를 GitHub academy-go1-roadmap 저장소 최상위에 업로드하세요.
+이전 버전의 vercel.json 및 api/[...path].js는 사용하지 않습니다. GitHub에 남아 있다면 삭제해야 합니다.
+
 필수 환경변수:
 - ANTHROPIC_API_KEY
 - PASSWORD
@@ -10,5 +12,3 @@ GitHub academy-go1-roadmap 저장소의 기존 go1.html을 포함하여 이 폴�
 - EFFORT
 - AXES
 - SUBJ
-
-index.html을 추가했으므로 배포 후 루트 주소(/)에서도 탐구로드맵이 열립니다.
